@@ -1,0 +1,1246 @@
+/* MENU LATERAL INCLUYENDO BOTÓN*/
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  #sidebar {
+    position: fixed;
+    width: 200px;
+    height: 60%;
+    background: rgb(173, 173, 134);
+    left: -200px;
+    transition: all 500ms linear;
+    z-index: 10;
+  }
+  
+  #sidebar.active {
+    left: 0px;
+  }
+  /* Se muestran todas las opciones de la barra lateral */
+  #sidebar ul li {
+    color: rgba(230, 230, 230, .9);
+    list-style: none;
+    padding: 15px 10px;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+  }
+  /* BOTÓN */
+  .logo1 {
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto; 
+  }
+  
+#toggle-btn {
+    position: absolute;
+    left: 215px;
+    top: 12px;
+    background: rgb(117, 148, 113);
+    cursor: pointer;
+    transition: all 0.5s linear;
+  }
+  
+#toggle-btn span {
+    display: block;
+    width: 40px;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+  }
+  /* Cambiar la posición del botón cuando el menú se ejecuta */
+#toggle-btn.active {
+    left:15px;
+    background:#777;
+  }
+/* LETRA MENÚ*/
+.color{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+/* base principal */
+.logo{
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 20px;
+    width: 150px;
+    height: 150px;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: beige;
+}
+header{
+    margin-top: 50px;
+    width: 100%;
+    overflow: hidden;
+    height: 120px;
+    position: relative;
+}
+nav{
+    top: -20px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: 20px auto;
+    max-width: 1000px;
+    width: 90%;
+}
+nav ul{
+    list-style: none;
+}
+nav>ul{
+    display: table;
+    /*quitamos el overflow hidden que estaba aqui*/
+    width: 100%;
+    background-color: rgb(173, 173, 134);
+    position: relative;
+}
+nav>ul li{
+    display: table-cell;
+}
+/*Submenú*/
+nav>ul>li:hover>ul{
+    display: block;
+    height: 100%;
+}
+nav>ul>li>ul{
+    display: block;
+    position: absolute;
+    background:rgb(173, 173, 134);
+    left: 0px;
+    right: 0px;
+    overflow: hidden;
+    height: 0%;
+    transition: all 0.3s ease;
+}
+nav>ul li a{
+    color: white;
+    display: block;
+    line-height: 20px;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+nav>ul>li>ul>li a:hover{
+    background-color: rgb(236, 255, 209);
+}
+nav>ul>li a span{
+    background: #174459;
+    display: block;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    position: absolute;
+    top: -60px;
+    transition: all 0.3s ease;
+    /*para bajar o subir el icono de la pestaña*/
+    line-height: 100px;
+}
+nav>ul>li>a:hover span{
+    top: 0px;
+}
+nav ul li a .primero{
+    background: rgb(236, 255, 209);
+}
+nav ul li a .segundo{
+    background: rgb(236, 255, 209);
+}
+nav ul li a .tercero{
+    background: rgb(236, 255, 209)
+}
+nav ul li a .cuarto{
+    background: rgb(236, 255, 209);
+}
+nav ul li a .quinto{
+    background: rgb(236, 255, 209);
+}
+nav ul li a .sexto{
+    background: rgb(236, 255, 209);
+}
+nav ul li a .septimo{
+    background: rgb(236, 255, 209);
+}
+nav ul li a .octavo{
+    background: rgb(236, 255, 209);
+}
+.imagencabezera{
+height: 400px;
+background-image: url(img/inicio2.jpg);
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100% 100%;
+}
+h1{
+    text-align: center;
+    color: rgb(173, 173, 134);
+}
+.pie{
+    text-align: center;
+    color: black;
+    background-color: rgb(173, 173, 134);
+    width:100%;
+}
+#icono{
+    width:40px;
+    height: 40px;
+    margin-left: 50%;
+}
+
+.final{
+    text-align:left;
+}
+.tituloindex{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+}
+
+/* PRODUCTOS */
+.textoproductos{
+    margin-left: 15px;
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.posicion{
+    
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 470px;
+}
+.tarjeta{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+}
+.tarjeta .cara{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.tarjeta .fuera{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0px 5px 10px #000;
+}
+.tarjeta .fuera img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.tarjeta .fuera h3{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgb(0,0,0,0.4);
+    text-align: center;
+}
+.tarjeta .dentro{
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0px 5px 10px #000;
+}
+.tarjeta .dentro .link{
+    border-top: 1px solid #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+.tarjeta .dentro .link a{
+    color: #f3f3f3;
+}
+.tarjeta .dentro h3{
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+.tarjeta .dentro p{
+    letter-spacing: 1px;
+}
+.tarjeta:hover .fuera{
+    transform: perspective(600px) rotateY(180deg);
+}
+.tarjeta:hover .dentro{
+    transform: perspective(600px) rotateY(360deg);
+}
+.imgproductos1{
+    width: 50px;
+    height: 50px;
+}
+.imgproductos{
+    width: 270px;
+    height: 200px;
+}
+.tablaproductos{
+    text-align: center;
+    margin-left: 300px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    color: rgb(173, 173, 134);
+}
+/* AREA CLIENTES */
+.login{
+    box-sizing: border-box;
+    width: 600px;
+    height: 400px;
+    background-color: rgb(201, 204, 121);
+    margin: auto;
+    margin-top: 180px;
+    box-shadow: 7px 13px 37px #666;
+    padding: 20px 30px;
+    border-top: 4px solid rgb(173, 173, 134);
+    color: white;
+}
+.login h5{
+    margin: 0;
+    text-align: center;
+    height: 50px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.rellenar{
+    width: 100%;
+    border: 2px solid rgb(173, 173, 134);
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    background: #174459;
+    font-size: 14px;
+    font-weight: bold;
+}
+.boton{
+    width: 100%;
+    height: 40px;
+    background: rgb(173, 173, 134);
+    border: none;
+    color: white;
+    margin-bottom: 16px;
+}
+.login p{
+    height: 40px;
+    text-align: center;
+    border-bottom: 1px solid;
+}
+.login a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+.login a:hover{
+    text-decoration: underline;
+}
+
+.tituloregistro{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: burlywood;
+}
+
+.registro1{
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 550px;
+    width: 100px;
+    height: 100px;
+}
+.registro2{
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 860px;
+    width: 100px;
+    height: 100px;
+}
+.registro{
+    box-sizing: border-box;
+    width: 600px;
+    height: 500px;
+    background-color: rgb(201, 204, 121);
+    margin: auto;
+    margin-top: 180px;
+    box-shadow: 7px 13px 37px #666;
+    padding: 20px 30px;
+    border-top: 4px solid rgb(173, 173, 134);
+    color: white;
+}
+.registro h5{
+    margin: 0;
+    text-align: center;
+    height: 50px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.registro p{
+    height: 40px;
+    text-align: center;
+    border-bottom: 1px solid;
+}
+.registro a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+.registro a:hover{
+    text-decoration: underline;
+}
+
+/* SERIVICIOS */
+.video1{
+    width: 700px;
+    height: 400px;
+    position: relative;
+    left: 370px;
+}
+.deco1video{
+    position: absolute;
+    margin-top: -15px;
+    margin-left: 25px;
+    width: 300px;
+    height: 450px;
+}
+.deco2video{
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 20px;
+    width: 150px;
+    height: 150px;
+} 
+.posicion{
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+}
+ul.fotos li img{
+    width:1000px;
+    height: 300px;
+}
+ul.fotos li{
+    float: left;
+    margin: 80px 120px;
+    border: 4px solid rgb(173, 173, 134);
+    list-style: none;
+}
+ul.fotos li a img{
+    float: left;
+    width: 450px;
+    display: block;
+    margin-left: auto;
+}
+ul.fotos li a:hover img{
+    box-shadow: 4px 4px 10px rgb(196, 47, 72);
+    transform: scale(1.5);
+}
+.boton{
+    text-decoration: none;
+    font-size: 15px;
+    color:#333333;
+    padding-top:8px;
+    padding-bottom:5px;
+    padding-left:25px;
+    padding-right:25px;
+    background-color:rgb(173, 173, 134);
+    border-color: #d8d8d8;
+    border-width: 3px;
+    border-style: solid;
+    border-radius:35px;
+}
+#textoservicios{
+    color: grey; 
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+/* CONTACTO */
+.mapa{
+    height: 400px;
+    width: 100%;
+}
+#izquierda{
+    color: black;
+    height: 30px;
+    text-align: right;
+    font-size: 15px;
+}
+#derecha{
+    color: black;
+    height: 30px;
+    text-align: left;
+    font-size: 15px;
+}
+#contacta{
+    text-align: left;
+    color: rgb(173, 173, 134);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 30px;
+    font-size: 20px;
+}
+#tablacontacto{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 1000px;
+}
+
+/* QUIENES SOMOS */
+.imagencabezera_quienessomos{
+    height: 400px;
+    background-image: url(img/quienes\ somos.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    }
+
+/* INDEX */
+.fotosini{
+    width: 100%;
+    margin: 0 auto;
+}
+.container::after{
+    content: "";
+    display: block;
+    height: 0px;
+    clear: both;
+}
+.container{
+    width: 90%;
+    margin: 0 9%;
+}
+/*estructura de cada componente de la galeria (imagen + descripción)*/
+.container div{
+    width: 28%;
+    height: auto;
+    display: inline;
+    float: left;
+    margin: 0% 3% 0% 0%;
+    padding: 0;
+}
+.container div img{
+    width: 400px;
+    height: 300px;
+    box-shadow: 0 0 10px #666;
+    box-shadow: 5px 8px 12px black;
+}
+/*estructura de la descripcion por defecto que no se muestre*/
+.container div img~span{
+    width: 400px;
+    display: block;
+    opacity: 0;
+    margin: 0px;
+    padding: 2px 5px;
+    color: rgb(55, 128, 88);
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 10px #666;
+    text-align: center;
+}
+/*vamos a mostar la descripcion al poner el cursor encima de la imagen*/
+.container div img:hover+span{
+    opacity: 1;
+}
+/*a especificar el comportamiento de las imagenes al poner el cursor encima del contenedot*/
+.container:hover div{
+    opacity: 0.2;
+    transform: scale(0.7);
+    transition: 2s;
+}
+/*se especifica el comportamiento que tendra la imagen seleccionada*/
+.container:hover div:hover{
+    opacity: 1;
+    transform: scale(1);
+}
+.container p {
+    font-size:2.6rem;
+    color: rgb(60, 122, 79);
+    position:absolute;
+    top:30%;
+    left: 30% ;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 8px black;
+    opacity: 0;
+    left: 140px;
+}
+.container:hover p{
+    opacity: 1;
+}
+
+#textofondo{
+    position: absolute;
+    top:15%;
+    left:17%;
+    font-size: 48px;
+    color: rgb(60, 122, 79);;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: inset 0 -10px 0 0 lightblue;
+    opacity: 0.5;
+}
+/*  */
+/* QUIENES SOMOS */
+
+.igagen1{
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15);
+  
+  }
+  .container2{
+      position: relative;
+  }
+  
+  .con1{
+      position: relative;
+      height: 200px;
+      width: 500px;
+      left: 150px;
+      top: 60px;
+  }
+  .letra20{
+          position: relative;
+          color: grey;
+          font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+       
+  }
+  .letra301{
+    color: grey;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    position: relative;
+    margin-left: 50%;
+  }
+  .letra40{
+      position: relative;
+      color: grey;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   
+  }
+  .con2{
+      position: relative;
+      border-style: solid;
+      width: 400px;
+      height: 400px;
+      bottom: 150px;
+      left: 900px;
+  }
+  .bautizo{
+      bottom: 100px;
+      position: relative;
+  }
+  .con3{
+      position: relative;
+      left: 700px;
+      height: 200px;
+      width: 500px;   
+  }
+  .con4{
+      position: relative;
+      bottom: 200px;
+      left: 200px;
+      width: 800px;
+  }
+  .comunion{
+      position: relative;
+      bottom: 100px;
+  }
+  .con5{
+      position: relative;
+      left: 150px;
+      height: 200px;
+      width: 500px;
+  }
+  .con6{
+      position: relative;
+      border-style: solid;
+      width: 400px;
+      height: 400px;
+      bottom: 250px;
+      left: 900px;
+  }
+  .letra10{
+     margin-left: 70px;
+     margin-right: 30px;
+     width: 1250px;
+     position: relative;
+     color: grey;
+     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  .bodas{
+      position: relative;
+      top: 40px;
+  }
+
+/* BLOGS */
+.Revista1{
+    left: 6%;
+    position: relative;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15);
+}
+.Revista2{
+    left: 38%;
+    position: relative;
+    width: 381px;
+    border-radius: 10px;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15);
+  
+}
+.Revista3{
+    left: 8%;
+    position: relative;
+    width: 280px;
+    top:33%;
+    border-radius: 10px;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15);
+    width: 300px;
+    height: 300px;
+}
+.Revista4{
+    left: 48%;
+    position: relative;
+    width: 260px;
+    top:33%;
+    border-radius: 10px;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15);
+    width: 300px;
+    height: 300px;
+}
+.deco1{
+     width: 30px;
+     left: 320px;
+    position: relative;
+     top: 12%;
+     width: 300px;
+     height: 300px;
+
+}
+#letra3{
+    color: grey;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    align-self:normal;
+    padding-right: 3%;
+    margin: 2%;   
+}
+.centrar{
+    display: flex;
+    justify-content: center;
+}
+.deco{
+    position: absolute;
+    width: 540px;
+    top:125%;
+    margin-right:22%;
+}
+.deco2{
+    position: absolute;
+    width: 540px;
+    margin-left: 79px;
+    top:175%;
+}
+.deco3{
+    position: absolute;
+    top:80%;
+    right:73%;
+    font-size:12px;
+}
+
+ul.galeria li{
+    float:left;
+    margin: 80px  60px;
+    border:3px solid rgb(76, 112, 73);
+    list-style: none;
+}
+ul.galeria li a img{
+    float:left;
+    width: 200px;
+    display: block;
+    margin-left: auto;
+}
+ul.galeria li a:hover img{
+    box-shadow: 4px 4px 10px rgb(214, 214, 214);
+    /*Propiedad transform que me permite transformary escalarla imagen a un tamaño de escala que yo quiera...*/
+    transform: scale(1.5);
+}
+
+/* EMPRESA */
+.Titulo1{
+    color:rgb(117, 148, 113);;
+    font-family:italic;
+}
+.letra{
+    color: grey;
+    font-family: italic;
+    align-self: initial;
+    text-align: center;
+}
+
+.btn{
+    position: relative;
+    display: block;
+    color: grey;
+    text-decoration: none;
+    margin-left: 560px;
+    border: solid rgb(173, 173, 134);
+    padding: 12px ;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 1s all ease;
+    width: 230px;
+    
+  }
+  .btn::before{
+    background: rgb(173, 173, 134);
+    left: 0px;;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    transition: all 0.6s ease;
+  }
+  .btn1::before{
+    width: 0%;
+    height: 100%;
+  }
+  
+  .btn1:hover::before{
+    width: 100%;
+  }
+  /* HISTORIA */
+   
+#letra2{
+    color: grey;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    position: relative;
+    margin-left: -91px;
+    padding-left: 18%;
+    font-size: 20px;
+    left: 20px;
+   
+}
+
+ .cont11{
+    position: relative;
+    height: 200px;
+    width: 500px;
+    left: 150px;
+    top: 60px;
+}
+.cont22{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    bottom: 80px;
+    left: 900px;
+}
+.cont33{
+    position: relative;
+    height: 200px;
+    width: 100%;
+    right: 150px;
+    top: 60px;
+   
+}
+.cont44{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    bottom: 80px;
+    right: 1px;
+}
+
+#img2{
+    position: relative;
+    float: right;
+    top:-70px;
+    width: 500px;
+    right:7%
+  }
+  #img3{
+    position: relative;
+    float: left;
+    top:10px;
+    width: 500px;
+    left: 7%;
+  }
+
+.letra3556{
+    color: grey;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    position: absolute;
+    margin-left: 50px;
+    font-size: 20px;
+    left: 770px;
+    top: 78px;
+}
+
+/* ELEGIRNOS */
+
+.elegir1{
+    position: relative;
+   left: 32%;
+    width: 500px;
+  }
+  .Titulo2{
+
+        color:rgb(117, 148, 113);;
+        font-family:italic;
+        text-align: center;
+  }
+#letra3{
+    color: grey;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    align-self:normal;
+    padding-right: 3%;
+    margin: 2%;   
+}
+.neon{
+    font-size: 29px;
+  text-align: center;
+  font-weight: bold;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+#sidebar{
+    display: none;
+   }
+   header{
+    display: block;
+   }
+
+@-webkit-keyframes glow {
+    from {
+      color: rgb(49, 83, 49);
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff, 0 0 90px #fff;
+    }
+    to {
+      color: rgb(236, 255, 209);
+      text-shadow: 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff , 0 0 60px #fff, 0 0 70px #fff, 0 0 80px #fff, 0 1 90px #fff;
+    }
+}
+
+/* RESPONSIVE */
+.menu_icon{
+    display: none;
+}
+@media screen and (min-width:576px) {
+    nav {
+        display: flex;
+    }
+    .menu_item {
+        display: inline-block;
+    }
+    .icon {
+        display: none;
+    }
+    .novedades {
+        display: flex;
+    }
+    .novedades>* {
+        width: 25%;
+    }
+    section.main_text,
+    section.images {
+        width: 50%;
+    }
+    section.images img {
+        width: 50%;
+        height: 25%;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .hidden {
+        display: block;
+    }
+    section.images {
+        order: 1;
+    }
+    section.main_text {
+        order: 2;
+    }
+    section.images img {
+        height: 33%;
+        width: 33%;
+    }
+}
+/* TABLET */
+@media only screen and (min-width: 576px) and (max-width: 991px) {
+    .imagencabezera_quienessomos{
+        height: 300px;
+    }
+    .container2{
+        position: relative;
+        width:100%;
+    }
+    .tablaproductos{
+        margin-left: 0px;
+    }
+    .container  div img{
+        width:200px;
+
+    }
+    .container p{
+    
+        left: 110px;
+    }
+    .btn {
+        position:relative;
+        margin-left:250px;
+    }
+    .titulo33{
+        display:none;
+    }
+  .cont33{
+    display:none;
+  }
+    .cont44{
+        display:none;
+    }
+    .cont22{
+        position:relative;
+        left:310px;
+        top:270px;   
+    }
+    .foter24{
+        margin-top:200px;
+    }
+    .video1{
+        display:none;
+    }
+    .elegir1{
+       position:relative;
+       left:50px;
+    }
+    .deco{
+        display:none;
+    }
+    .deco2{
+        display:none;
+    }
+    .deco3{
+        display:none;
+    }
+    .Revista1{
+        left:170px;
+    }
+    .Revista2{
+        left:170px;
+    }
+    .Revista3{
+        left:170px;
+    }
+    .Revista4{
+       display: none;
+    }
+    .con1{
+        position: relative;
+        left: 50px;
+        top: 60px;
+    }
+    .con2{
+        position: relative;
+      top: 100px;
+      left: 300px;
+    }
+    .bautizo{
+        bottom: -100px;
+        position: relative;
+    }
+    .con3{
+        position: relative;
+        left: 30px;
+        top: 150px;
+    
+    }
+    .con4{
+        position: relative;
+      top: 230px;
+      left: 400px;
+    }
+    .comunion{
+        display: none;
+    }
+    .con5{
+        display: none;
+    }
+    .con6{
+        display: none;
+    }
+   .footer-his{
+    position: relative;
+    top: 370px;
+   }
+   #sidebar{
+    display: block;
+   }
+   header{
+    display: none;
+   }
+}
+
+/* MOVIL */
+@media only screen and (max-width:576px){
+   #tablacontacto{
+    margin-left:-140px;
+    text-align:none;
+    }
+    .container-login{
+        position:absolute;
+        width: 300px;
+    }
+    .login{
+        width:400px;
+    }
+    .tablaproductos{
+        display:none;  
+    }
+   
+    .container  div img{
+        width:150px;
+        flex-direction:column;
+        margin-left: 30px;
+    }
+     .container:hover .borrar1{
+        display:none;
+    }
+    .btn {
+        position:relative;
+        margin-left:150px;
+    }
+    .video1{
+        display:none;
+    }
+    .elegir1{
+        position:relative;
+        left:120px;
+        width:200px;
+        height:100px;
+     }
+     .deco{
+        display:none;
+    }
+    .deco2{
+        display:none;
+    }
+    .deco3{
+        display:none;
+    }
+    .Revista1{
+        left:120px;
+    }
+    .Revista2{
+        left:120px;
+    }
+    .Revista3{
+        left:120px;
+    }
+    .Revista4{
+       left: 120px;
+    }
+    .cont44{
+        display:none;
+    }
+    .titulo33{
+        display: none;
+    }
+    #letra2{
+        position: relative;
+        left: -120px;
+    }
+    #img2{
+        position: relative;
+        left: -780px;
+        top: 330px;
+    }
+   .borrar1{
+    display: none;
+   }
+   .container p {
+    display: none;
+   }
+   .container div{
+    margin: 0px 10px;
+    margin-left: 40px;
+   }
+   .con1{
+    position: relative;
+    left: 50px;
+    width: 380px;
+   }
+   .con2{
+    display: none;
+   }
+   .bautizo{
+    position: relative;
+    top: 170px;
+   }
+   .con3{
+    position: relative;
+    left: 50px;
+    width: 380px;
+    top: 240px;
+   }
+   .con4{
+    display: none;
+   }
+   .con5{
+    display: none;
+   }
+   .con6{
+    display: none;
+   }
+   .comunion{
+    display: none;
+   }
+   .footer-his{
+    position: relative;
+    top: 420px;
+   }
+   #sidebar{
+    display: block;
+   }
+   header{
+    display: none;
+   }
+   .cont33{
+    display: none;
+   }
+   .foter24{
+    position: relative;
+    top: 290px;
+   }
+
+}

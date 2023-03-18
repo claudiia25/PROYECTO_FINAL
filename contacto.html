@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" ></script>
+    <title>CONTACTO</title>
+</head>
+<body>
+    <!-- MENUÚ LATERAL -->
+    <div id="sidebar">
+        <div id="toggle-btn">
+          <span>&#9776</span>
+        </div>
+        <ul>
+          <li>
+            <img src="" alt="¡BIENVENIDOS!" class="logo1">
+          </li>
+          <li><a href="index.html" class="color">Inicio</a></li>
+          <li><a href="quienes_somos.html" class="color">Quienes Somos</a></li>
+          <li><a href="servicios.html" class="color">Servicios</a></li>
+          <li><a href="productos.html" class="color">Productos</a></li>
+          <li><a href="contacto.html" class="color">Contacto</a></li>
+          <li><a href="blog_noticias.html" class="color">Blog  |  Noticas</a></li>
+          <li><a href="area_clientes_login.html" class="color">Área Cliente</a></li>
+        </ul>
+      </div>
+      <!-- MENÚ PRINCIPAL -->
+    <header>
+        <img class="logo" src="img/logo sin fondo.png" alt="">
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html"><span class="primero"><img src="icon/inico.png" alt=""></span>Inicio</a>
+                </li>
+                <li>
+                        <a href="quienes_somos.html" target="_blank"><span class="segundo"><img src="icon/quienes somos.png" alt=""></span>Quienes somos</a>
+                    <ul>
+                        <li><a href="empresa.html" target="_blank">¿De qué va nuestra empresa?</a></li>
+                        <li><a href="historia.html" target="_blank">Historia</a></li>
+                        <li><a href="elegirnos.html" target="_blank">¿Por qué elegirnos?</a></li>
+                    </ul>
+                </li>
+                <li><a href="servicios.html" target="_blank"><span class="tercero"><img src="icon/proyectos.png" alt=""></span>Servicios</a></li>
+                <li><a href="productos.html" target="_blank"><span class="quinto"><img src="icon/servicios.png" alt=""></span>Productos</a></li>
+                <li><a href="contacto.html" target="_blank"><span class="sexto"><img src="icon/mensaje.png" alt=""></span>Contacto</a></li>
+                <li><a href="blog_noticias.html" target="_blank"><span class="septimo"><img src="icon/blog.png" alt=""></span>Blog Noticias</a></li>
+                <li><a href="area_clientes_login.html" target="_blank"><span class="octavo"><img src="icon/clientes.png" alt=""></span>Área Cliente</a></li>
+            </ul>
+        </nav>
+        </header>
+    <div class="mapa">
+        <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.9609025659897!2d-3.7760909847024!3d40.36539126668431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4189b20e55f439%3A0x3ee9caddeead122c!2sCtra.%20Barrio%20de%20la%20Fortuna%2C%2014%2C%2028054%20Madrid!5e0!3m2!1ses!2ses!4v1678290945410!5m2!1ses!2ses" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+       <br>
+       <br>
+    <table border="0px" id="tablacontacto">
+        <form action="mailto:c&cplaners@gmail.com" name="datos" method="post">
+            <tr>
+                <td></td>
+                <td id="contacta" colspan="2">¡Contacta con nosotros!</td>
+            </tr>
+            <tr>
+                <td id="izquierda">Nombre</td>
+                <td id="derecha"><input type="text" required></td>
+            </tr>
+            <tr>
+                <td id="izquierda">Apellidos</td>
+                <td id="derecha"><input type="text" required></td>
+            </tr>
+            <tr>
+                <td id="izquierda">Teléfono</td>
+                <td id="derecha"><input type="number" min="100000000" maxlength="999999999" required></td>
+            </tr>
+            <tr>
+                <td id="izquierda">Email</td>
+                <td id="derecha"><input type="mail" required></td>
+            </tr>
+            <tr>
+                <td id="izquierda">Dirección</td>
+                <td id="derecha"><input type="text" required></td>
+            </tr>
+            <tr>
+                <td id="izquierda">Población</td>
+                <td id="derecha"><select name="Estudios" id="Estudios">
+                    <option value="">Elige tu población</option>
+                    <option value="">Madrid</option>
+                    <option value="">Valencia</option>
+                    <option value="">Barcelona</option>
+                    <option value="">Sevilla</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td id="izquierda">Tipo de evento</td>
+                <td id="derecha"><input type="radio" name="evento" value="boda"> Boda 
+                    <input type="radio" name="evento" value="Babyshower"> Bautizo 
+                    <input type="radio" name="evento" value="Cumpleaños"> Comunión
+                </td>
+            </tr>
+            <tr>
+                <td id="izquierda">Coméntanos tu idea</td>
+                <td id="derecha"><textarea name="Cuentanos tu idea" id="" rows="10" cols="50"></textarea></td>
+            </tr>
+            <tr>
+                <td id="izquierda">Puedes adjuntar una foto</td>
+                <td id="derecha"><input type="file" name="archivo"></td>
+            </tr>
+            <tr>
+                <td id="izquierda">Opción: Enviar o Resetear</td>
+                <td id="derecha"><input type="submit" value="Enviar">
+                    <input type="reset" value="Borrar">
+                </td>
+            </tr>
+        </form>
+        </table>
+        <br>
+        <br>
+
+        
+    <footer>
+            <div class="pie">
+              <br>
+              608 56 78 03
+              <br>
+              <br>
+              c&cplaners@gmail.com
+              <br>
+              <br>
+              C/Barrio de la Fortura Nº14 
+              <br>
+              <br>
+              28056 - Madrid
+              <br>
+              <br>
+              
+              <div class="final">
+                <img  id="icono"src="icon/tittwer.png">
+                <img id="icono" src="icon/instagram.png">
+                <br>
+                <br>
+                2023 C&C plners | Política de Privacidad | Aviso Legal | Política de Cookies 
+              </div>
+            </div>
+    </footer>
+</body>
+
+
+
+</html>
